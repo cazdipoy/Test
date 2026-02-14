@@ -1,30 +1,10 @@
-// console.log("Cazdi");
+const express = require('express');
+const app = express();
+const port = 3000; 
 
-//var let const
+app.get('/about', (req, res) => {
+    res.send("Tajaabo Express server.");
+});
 
-// var name = "abdi";
-// console.log(name);
-
-// let h=19
-// console.log(h);
-
-// let j="gabow"
-// console.log(j);
-
-
-// let a = 10;
-// a = 27;
-// console.log(a);
-
-
-let name = ["abdi", "hassan", "mohamed", "Cazdi","Siciid"];
-name.pop("Siciid");
-console.log(name);
-let m = ["abdi", "hassan", "mohamed", "Cazdi","Siciid"];
-m.push("abdirahman");
-console.log(m);
-function sum(t,m){
-    return t+m;
-}
-console.log(sum(10,9));
-
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`); });
